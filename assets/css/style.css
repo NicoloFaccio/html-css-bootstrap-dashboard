@@ -1,25 +1,16 @@
 header {
-    height: 50px;
-    background-color: red;
+    border: 2px solid red;
 }
 
 .div-1 {
-    background-color: lime;
-    /* height: 100%; */
-    position: fixed;
-    top: 0;
-    bottom: 0;
-
-    padding-top: 100px;
+    border: 2px solid lime;
 }
 
 .div-2 {
-    background-color: purple;
-    height: 10000px;
-    width: 100%;
-    overflow: auto;
+    border: 2px solid purple;
+    width: calc(100% - 25%);
 }
 
-section {
-    height: 100vh;
-}
+/* section {
+    height: 100%;
+} */
