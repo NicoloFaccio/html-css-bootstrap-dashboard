@@ -1,5 +1,5 @@
 /* CLASSES UTIITIES */
-.main_content {
+.why {
     border: 2px solid purple;
 }
 
@@ -21,5 +21,4 @@ header nav div figure > img:first-child {
     width: calc(100% - 25%);
     padding-top: 7vh;
 }
-
 
