@@ -1,0 +1,25 @@
+header {
+    height: 50px;
+    background-color: red;
+}
+
+.div-1 {
+    background-color: lime;
+    /* height: 100%; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    padding-top: 100px;
+}
+
+.div-2 {
+    background-color: purple;
+    height: 10000px;
+    width: 100%;
+    overflow: auto;
+}
+
+section {
+    height: 100vh;
+}
