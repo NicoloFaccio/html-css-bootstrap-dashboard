@@ -1,5 +1,5 @@
 /* CLASSES UTIITIES */
-* {
+.main_content {
     border: 2px solid purple;
 }
 
@@ -12,12 +12,12 @@ header nav div figure > img:first-child {
 }
 
 /* CLASSES'S MAIN RIGHT DIV */
-.div-1 {
+.side-bar {
     padding-top: 7vh;
 }
 
 /* CLASSES'S MAIN LEFT DIV */
-.div-2 {
+.main_content {
     width: calc(100% - 25%);
     padding-top: 7vh;
 }
