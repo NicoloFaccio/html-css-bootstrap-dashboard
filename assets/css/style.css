@@ -1,16 +1,23 @@
-header {
-    border: 2px solid red;
-}
-
-.div-1 {
-    border: 2px solid lime;
-}
-
-.div-2 {
+/* CLASSES UTIITIES */
+* {
     border: 2px solid purple;
-    width: calc(100% - 25%);
 }
 
-/* section {
-    height: 100%;
-} */
+header {
+    height: 7vh;
+}
+
+header nav div figure > img:first-child {
+    max-width: 50px;   
+}
+
+/* CLASSES'S MAIN RIGHT DIV */
+.div-1 {
+    padding-top: 7vh;
+}
+
+/* CLASSES'S MAIN LEFT DIV */
+.div-2 {
+    width: calc(100% - 25%);
+    padding-top: 7vh;
+}
