@@ -7,7 +7,7 @@ header {
     height: 7vh;
 }
 
-header nav div figure > img:first-child {
+header nav div a img:first-child {
     max-width: 50px;   
 }
 
@@ -21,6 +21,3 @@ header nav div figure > img:first-child {
     width: calc(100% - 25%);
     padding-top: 7vh;
 }
-
-
-/* VERIFICARE Col da 7 NELLA SEZIONE  STUEDNTI */
