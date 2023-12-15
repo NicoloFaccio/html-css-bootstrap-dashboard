@@ -4,20 +4,15 @@
 }
 
 header {
-    height: 7vh;
+    height: 80px;
 }
 
 header nav div a img:first-child {
     max-width: 50px;   
 }
 
-/* CLASSES'S MAIN RIGHT DIV */
-.side-bar {
-    padding-top: 7vh;
-}
+/* CLASSES'S MAIN */
 
-/* CLASSES'S MAIN LEFT DIV */
-.main_content {
-    width: calc(100% - 25%);
-    padding-top: 7vh;
+section {
+    height: calc(100vh - 80px);
 }

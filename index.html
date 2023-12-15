@@ -16,11 +16,12 @@
 <body>
     <header class="fixed-top">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg mt-2">
             <div class="container-fluid">
                 <!-- Logo -->
               <a class="navbar-brand" href="#">
-                <img class="img-fluid" src="./assets/img/mobile-logo.png" alt="logo-mobile">
+                <img class="img-fluid d-lg-none" src="./assets/img/mobile-logo.png" alt="logo-mobile">
+                <img class="img-fluid d-none d-lg-block" src="./assets/img/logo.svg" alt="logo">
               </a>
 
               <!-- Search bar -->
@@ -70,38 +71,59 @@
                 </ul>
               </div>
             </div>
-          </nav>
-
-        <!-- <nav class="d-flex justify-content-between align-items-center p-3">
-            <div>
-                <figure class="">
-                    <img class="img-fluid d-lg-none" src="./assets/img/mobile-logo.png" alt="Logo small">
-                    <img class="img-fluid w-auto d-none d-lg-block" src="./assets/img/logo.svg" alt="Logo large">
-                </figure>
-            </div>
-            <div>laom</div>
-            <div class="d-flex align-items-center column-gap-2">
-                <div class="d-none d-lg-block">D</div>
-                <div class="d-none d-lg-block">D</div>
-                <div class="d-none d-lg-block">D</div>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      D
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </div>
-            </div>
-        </nav> -->
+        </nav>
     </header>
 
-    <main>
-        <section class="d-flex">
+    <main class="why">
+        <section>
             <!-- DIV'S SIDE-BAR -->
-            <div class="side-bar fixed-top fixed-bottom w-25 d-flex flex-column justify-content-between align-items-center">
+            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: 4.5rem;">
+                <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                  <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                  <span class="visually-hidden">Icon-only</span>
+                </a>
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"></use></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"></use></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"></use></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"></use></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers" aria-describedby="tooltip313132">
+                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Customers"><use xlink:href="#people-circle"></use></svg>
+                    </a>
+                  </li>
+                </ul>
+                <div class="dropdown border-top">
+                  <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            <!-- <div class="side-bar fixed-top fixed-bottom w-25 d-flex flex-column justify-content-between align-items-center">
                 <div class="pt-4">
                     <div class="py-2">
                         <div>
@@ -141,12 +163,12 @@
                         </span>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- DIV'S MAIN CONTENT -->
             <div class="main_content ms-auto">
                 <!-- DIV ABOUT THE STUDENTS -->
-                <div class="bg-primary">
+                <!-- <div class="bg-primary">
                     <div class="container">
                         <div class="row">
                             <div class="py-3 col-12 col-md-4 order-md-3">
@@ -175,11 +197,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="d-lg-flex">
                     <!-- DIV ABOUT THE FUTURE CLASSES AND F.A.Q-->
-                    <div class="container my-3">
+                    <!-- <div class="container my-3">
                         <div class="row">
                             <div class="col-12 col-lg-7 border">
                                 LAOM
@@ -188,7 +210,7 @@
                             <div class="col-12 col-lg-5 border">
                                 LAOM
                             </div>
-                    </div>
+                    </div> -->
 
                     <!-- DIV ABOUT THE TODO LIST AND ACTIVE STUDENTS -->
                     <!-- <div class="why container w-lg-25 my-3">
