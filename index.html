@@ -14,31 +14,29 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="fixed-top">
+    <header>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg mt-2">
-            <div class="container-fluid">
+            <div class="container-fluid flex-nowrap">
                 <!-- Logo -->
               <a class="navbar-brand" href="#">
                 <img class="img-fluid d-lg-none" src="./assets/img/mobile-logo.png" alt="logo-mobile">
-                <img class="img-fluid d-none d-lg-block" src="./assets/img/logo.svg" alt="logo">
+                <img class="img-fluid d-none d-lg-block"  src="./assets/img/logo.svg" alt="logo">
               </a>
 
               <!-- Search bar -->
-              <!-- <form class="d-flex w-75" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form> -->
+              <form class="d-flex w-100" role="search">
+                <div class="input-group flex-nowrap">
+                  <span class="input-group-text border-end-0" id="addon-wrapping">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                  <input type="text" class="border-start-0 form-control bg-body-tertiary" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+              </form>
 
-              <div class="input-group flex-nowrap w-50">
-                <span class="input-group-text border-end-0" id="addon-wrapping">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </span>
-                <input type="text" class="border-start-0 form-control bg-body-tertiary" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="addon-wrapping">
-              </div>
-
+              <!-- Icons -->
               <div id="navbarSupportedContent d-flex">
-                <ul class="nav d-flex">
+                <ul class="nav flex-nowrap d-flex">
                   <li class="nav-item">
                     <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
                         <i class="fa-solid fa-list-ul"></i>
@@ -61,11 +59,16 @@
                     <a class="text-warning nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-bell"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item text-capitalize" href="#">profilpo</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item text-capitalize" href="#">fatturazione</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item text-capitalize" href="#">logout</a>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -75,158 +78,87 @@
     </header>
 
     <main class="why">
-        <section>
-            <!-- DIV'S SIDE-BAR -->
-            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: 4.5rem;">
-                <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
-                  <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                  <span class="visually-hidden">Icon-only</span>
+        <!-- DIV'S SIDE-BAR -->
+        <div class="d-flex flex-column justify-content-between flex-shrink-0 bg-body-tertiary h-100" style="width: 4.5rem;">
+            <ul class="nav nav-pills nav-flush flex-column text-center">
+              <li>
+                <a href="#" class="nav-link py-3"  data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                    <i class="fa-solid fa-house"></i>
                 </a>
-                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
-                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"></use></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
-                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"></use></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
-                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"></use></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
-                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"></use></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers" aria-describedby="tooltip313132">
-                      <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Customers"><use xlink:href="#people-circle"></use></svg>
-                    </a>
-                  </li>
-                </ul>
-                <div class="dropdown border-top">
-                  <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
-                  </a>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                </div>
-              </div>
-
-            <!-- <div class="side-bar fixed-top fixed-bottom w-25 d-flex flex-column justify-content-between align-items-center">
-                <div class="pt-4">
-                    <div class="py-2">
-                        <div>
-
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3"  data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3"  data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                    <i class="fa-solid fa-signal"></i>
+                </a>
+              </li>
+            </ul>
+            <div>
+              <a href="#" class="d-flex align-items-center justify-content-center p-3
+              text-decoration-none">
+                <i class="fa-solid fa-gear"></i>
+              </a>
+            </div>
+          </div>
+        <!-- DIV'S MAIN CONTENT -->
+        <div class="main_content ms-auto">
+            <!-- DIV ABOUT THE STUDENTS -->
+            <!-- <div class="bg-primary">
+                <div class="container">
+                    <div class="row">
+                        <div class="py-3 col-12 col-md-4 order-md-3">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                      ...
+                                </div>
+                            </div>
                         </div>
-                        <span class="d-none d-lg-block">
-                            <a class="text-capitalize text-decoration-none" href="#">home</a>
-                        </span>
-                    </div>
-
-                    <div class="py-2">
-                        <div>
-
+                        <div class="py-3 col-12 col-md-4 order-md-1">
+                            <div class="d-flex">
+                                <h4>boolean</h4>
+                                <button>Piano blaze</button>
+                            </div>
                         </div>
-                        <span class="d-none d-lg-block">
-                            <a class="text-capitalize text-decoration-none" href="#">stats</a>
-                        </span>
-                    </div>
-
-                    <div class="py-2">
-                        <div>
-
+                        <div class="py-3 col-12 col-md-4 order-md-2">
+                            <p>Studenti online negli ultimi 30 minuti</p>
+                            <span>125</span>
                         </div>
-                        <span class="d-none d-lg-block">
-                            <a class="text-capitalize text-decoration-none" href="#">signals</a>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="pb-5">
-                    <div>
-                        <div>
-
-                        </div>
-                        <span class="d-none d-lg-block">
-                            <a class="text-capitalize text-decoration-none" href="#">admin</a>
-                        </span>
                     </div>
                 </div>
             </div> -->
-
-            <!-- DIV'S MAIN CONTENT -->
-            <div class="main_content ms-auto">
-                <!-- DIV ABOUT THE STUDENTS -->
-                <!-- <div class="bg-primary">
-                    <div class="container">
-                        <div class="row">
-                            <div class="py-3 col-12 col-md-4 order-md-3">
-                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
-                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                                    <div class="offcanvas-header">
-                                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                    </div>
-                                    <div class="offcanvas-body">
-                                          ...
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="py-3 col-12 col-md-4 order-md-1">
-                                <div class="d-flex">
-                                    <h4>boolean</h4>
-                                    <button>Piano blaze</button>
-                                </div>
-                            </div>
-
-                            <div class="py-3 col-12 col-md-4 order-md-2">
-                                <p>Studenti online negli ultimi 30 minuti</p>
-                                <span>125</span>
-                            </div>
+            <div class="d-lg-flex">
+                <!-- DIV ABOUT THE FUTURE CLASSES AND F.A.Q-->
+                <!-- <div class="container my-3">
+                    <div class="row">
+                        <div class="col-12 col-lg-7 border">
+                            LAOM
+                        </div>
+                        <div class="col-12 col-lg-5 border">
+                            LAOM
+                        </div>
+                </div> -->
+                <!-- DIV ABOUT THE TODO LIST AND ACTIVE STUDENTS -->
+                <!-- <div class="why container w-lg-25 my-3">
+                    <div class="row">
+                        <div class="col-12">
+                            LAOM
+                        </div>
+                        <div class="col-12">
+                            LAOM
                         </div>
                     </div>
                 </div> -->
-
-                <div class="d-lg-flex">
-                    <!-- DIV ABOUT THE FUTURE CLASSES AND F.A.Q-->
-                    <!-- <div class="container my-3">
-                        <div class="row">
-                            <div class="col-12 col-lg-7 border">
-                                LAOM
-                            </div>
-
-                            <div class="col-12 col-lg-5 border">
-                                LAOM
-                            </div>
-                    </div> -->
-
-                    <!-- DIV ABOUT THE TODO LIST AND ACTIVE STUDENTS -->
-                    <!-- <div class="why container w-lg-25 my-3">
-                        <div class="row">
-                            <div class="col-12">
-                                LAOM
-                            </div>
-
-                            <div class="col-12">
-                                LAOM
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
