@@ -16,3 +16,11 @@ header nav div a img:first-child {
 main {
     height: calc(100vh - 80px);
 }
+
+main > div:first-child {
+    background-image: url("../img/sidebar-bg.png");
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+/* FINIRE LA BREACRUP DIVE C'è ILPIU */
