@@ -25,10 +25,10 @@
               </a>
 
               <!-- Search bar -->
-              <form class="d-flex w-100" role="search">
-                <div class="input-group flex-nowrap">
+              <form class="w-100" role="search">
+                <div class="d-flex justify-content-between">
                   <span class="input-group-text border-end-0" id="addon-wrapping">
-                      <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                   </span>
                   <input type="text" class="border-start-0 form-control bg-body-tertiary" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="addon-wrapping">
                 </div>
@@ -39,25 +39,25 @@
                 <ul class="nav flex-nowrap d-flex">
                   <li class="nav-item">
                     <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
-                        <i class="fa-solid fa-list-ul"></i>
+                      <i class="fa-solid fa-list-ul"></i>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
-                        <i class="fa-solid fa-circle-question"></i>
+                      <i class="fa-solid fa-circle-question"></i>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
                     </a>
                   </li>
 
                   <li class="nav-item dropdown">
                     <a class="text-warning nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-bell"></i>
+                      <i class="fa-solid fa-bell"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                       <li>
@@ -129,16 +129,114 @@
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                   <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                      Inserisci un nuovo studente
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1">@</span>
-                      <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="d-flex justify-content-between column-gap-3 my-3">
+                      <div class="w-50">
+                        <label class="text-capitalize" for="Name">nome</label>
+                        <input type="text" class="form-control" aria-label="Username" 
+                        aria-describedby="basic-addon1" id="Name"
+                        name="Name">
+                      </div>
+
+                      <div class="w-50">
+                        <label class="text-capitalize d-block" for="Last-Name">cognome</label>
+                        <input type="text" class="form-control" aria-label="Username" 
+                        aria-describedby="basic-addon1" id="Last-Name"
+                        name="Last-Name">
+                      </div>
                     </div>
+
+                    <div class="d-flex justify-content-between column-gap-3">
+                      <div class="w-50">
+                        <label class="text-capitalize" for="e-mail">email</label>
+  
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                        <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"
+                        id="e-mail" name="e-mail">
+                      </div>
+
+                      <div class="w-50">
+                        <label class="text-capitalize d-block" for="Password">password</label>
+                        <input type="text" class="form-control" aria-label="Username" 
+                        aria-describedby="basic-addon1" id="Password"
+                        name="Password">
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between column-gap-3 my-3">
+                      <div class="w-50">
+                        <label class="text-capitalize" for="e-mail">indirizzo email</label>
+  
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                        <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"
+                        id="e-mail" name="e-mail">
+                      </div>
+
+                      <div class="w-50">
+                        <label class="text-capitalize d-block" for="Password">password</label>
+                        <input type="text" class="form-control" aria-label="Username" 
+                        aria-describedby="basic-addon1" id="Password"
+                        name="Password">
+                      </div>
+                    </div>
+                    
+                    <div class="my-3">
+                      <label class="text-capitalize d-block" for="adress">indirrizzo</label>
+                      <input type="text" class="form-control" aria-label="Username" 
+                      aria-describedby="basic-addon1" id="adress"
+                      name="adress">
+                    </div>
+
+                    <div class="d-flex justify-content-between column-gap-3 my-3">
+                      <div>
+                        <label class="text-capitalize" for="city">città</label>
+                        <input type="text" class="form-control" aria-label="Username" 
+                        aria-describedby="basic-addon1" id="city"
+                        name="city">
+                      </div>
+
+                      <form action="/action_page.php" method="get">
+                        <label class="text-capitalize" for="nation">stato:</label>
+                        <input class="form-control" list="nations" name="nation" id="nation" placeholder="Scegli...">
+                        <datalist id="nations">
+                          <option value="Italia">
+                          <option value="Francia">
+                          <option value="Cina">
+                          <option value="Germania">
+                          <option value="Danimarca">
+                        </datalist>
+                      </form>
+                      
+                      <div>
+                        <label class="text-uppercase d-block" for="CAP">cap</label>
+                        <input type="text" class="form-control" aria-label="Username" 
+                        aria-describedby="basic-addon1" id="CAP"
+                        name="CAP">
+                      </div>
+                    </div>
+
+                    <form action="/action_page.php">
+                      <label class="text-capitalize" for="myfile">foto:</label>
+                      <input class="border rounded-1 w-100" type="file" id="myfile" name="myfile" multiple><br><br>
+                    </form>
+
+                    <form action="/action_page.php">
+                      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" required>
+                      <label for="vehicle1">Seleziona per proseguire</label>
+                    </form>
+
+                    <form class="pt-3" action="/action_page.php">
+                      <input class="bg-primary fw-bold text-white border-0 rounded p-2" type="submit"     value="Salva">
+    
+                      <input class="bg-warning fw-bold text-black border-0 rounded p-2" type="submit"     value="Svuota">
+                    </form>
                   </div>
                 </div>
               </div>
@@ -154,19 +252,19 @@
                   </ol>
                 </nav>
                 <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
-                  <ol class="breadcrumb">
+                  <ol class="breadcrumb flex-nowrap">
                     <li class="breadcrumb-item bg-black bg-opacity-50 px-2 rounded-5 text-white ">3 app</li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      <span class="d-lg-none bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                      <span class="d-lg-none my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
                         <i class="fa-solid fa-plus"></i>
                       </span>
-                      <span class="d-none d-lg-inline-block bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                      <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
                         Boolean mobile app
                       </span>
-                      <span class="d-none d-lg-inline-block bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                      <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
                         Boolean web app
                       </span>
-                      <span class="d-none d-lg-inline-block bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                      <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
                         Boolean blog app
                       </span>
                     </li>
