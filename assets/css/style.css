@@ -34,3 +34,8 @@ main > div:first-child {
 .avatar {
     max-width: 30px;
 }
+
+.space {
+    margin: 0 auto;
+    width: 95%;
+}

@@ -178,14 +178,14 @@
         <!-- DIV'S STUDENTS -->
         <div class="container-fluid">
           <div class="row">
-            <div class="col-12 col-lg-8 p-2">
-               <!-- DIV'S TABLE OF THE CLASSES -->
+            <div class="col-12 col-lg-8 py-3">
+              <!-- DIV'S TABLE OF THE CLASSES -->
               <div class="border rounded-1">
                 <div class="border-bottom bg-secondary-subtle">
                   <h4 class="text-capitalize px-1 pb-1">prossime classi</h4>
                 </div>
-                <div>
-                  <table class="table align-middle table-hover table-responsive text-center mb-2">
+                <div class="space">
+                  <table class="table align-middle table-hover table-responsive text-center mb-4">
                     <thead>
                       <tr>
                         <th scope="col" class="text-capitalize text-start">nome</th>
@@ -408,14 +408,58 @@
                   </h4>
                 </div>
 
-                <div>
-
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Come aggiungere un nuovo studente?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Clicca sul + in alto nella sezione blu*
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Come posso accedere alle informazioni del mio account?
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Clicca sull'icona della campanella.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Posso usare questa dashboard da mobile?
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Certamente
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             
 
-            <div class="col-12 col-lg-4"></div>
+            <div class="col-12 col-lg-4 py-3">
+              <!-- DIV'S TODO -->
+              <div class="border rounded-1">
+                <div class="border-bottom bg-secondary-subtle">
+                  <h4 class="text-capitalize px-1 pb-1">
+                    todo                  
+                  </h4>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
