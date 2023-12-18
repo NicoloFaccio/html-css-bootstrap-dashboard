@@ -110,7 +110,7 @@
       </div>
 
       <!-- DIV'S STUDENTS AND INFORMATIONS -->
-      <div class="w-100">
+      <div class="w-100 overflow-auto">
 
         <!-- DIV'S COLORED BACKGROUND -->
         <div>
@@ -179,35 +179,242 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-12 col-lg-8 p-2">
+               <!-- DIV'S TABLE OF THE CLASSES -->
               <div class="border rounded-1">
                 <div class="border-bottom bg-secondary-subtle">
                   <h4 class="text-capitalize px-1 pb-1">prossime classi</h4>
                 </div>
                 <div>
-                  <table class="table table-hover table-responsive">
+                  <table class="table align-middle table-hover table-responsive text-center mb-2">
                     <thead>
                       <tr>
-                        <th scope="col" class="text-capitalize">nome</th>
-                        <th scope="col" class="d-none d-lg-block">Data inizio</th>
-                        <th scope="col" class="d-none d-lg-block text-uppercase">roi</th>
+                        <th scope="col" class="text-capitalize text-start">nome</th>
+                        <th scope="col" class="">Data inizio</th>
+                        <th scope="col" class=" text-uppercase">roi</th>
                         <th scope="col" class="text-capitalize">stato</th>
                         <th scope="col" class="text-capitalize">azioni</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">1</th>
-                        <th scope="row" class="d-none d-lg-block">1</th>
-                        <th scope="row" class="d-none d-lg-block">1</th>
-                        <th scope="row">1</th>
-                        <th scope="row">1</th>
+                        <td class="d-flex align-items-center column-gap-1" scope="row">
+                          <figure class="avatar mb-0">
+                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                          </figure>
+                          <span class="text-capitalize">
+                            classe 75
+                          </span>
+                        </td>
+                        <td scope="row" class=" text-capitalize">15 feb 2021</td>
+                        <td scope="row" class="">20%</td>
+                        <td scope="row">
+                          <span class="badge text-bg-success text-capitalize">done</span>
+                        </td>
+                        <td scope="row">
+                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+
+                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <td class="d-flex align-items-center column-gap-1" scope="row">
+                          <figure class="avatar mb-0">
+                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                          </figure>
+                          <span class="text-capitalize">
+                            classe 76
+                          </span>
+                        </td>
+                        <td scope="row" class=" text-capitalize">16 feb 2021</td>
+                        <td scope="row" class="">20%</td>
+                        <td scope="row">
+                          <span class="badge text-bg-success text-capitalize">done</span>
+                        </td>
+                        <td scope="row">
+                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+
+                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <td class="d-flex align-items-center column-gap-1" scope="row">
+                          <figure class="avatar mb-0">
+                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                          </figure>
+                          <span class="text-capitalize">
+                            classe 77
+                          </span>
+                        </td>
+                        <td scope="row" class=" text-capitalize">17 feb 2021</td>
+                        <td scope="row" class="">20%</td>
+                        <td scope="row">
+                          <span class="badge text-bg-warning text-capitalize text-white">process</span>
+                        </td>
+                        <td scope="row">
+                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+
+                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <td class="d-flex align-items-center column-gap-1" scope="row">
+                          <figure class="avatar mb-0">
+                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                          </figure>
+                          <span class="text-capitalize">
+                            classe 78
+                          </span>
+                        </td>
+                        <td scope="row" class=" text-capitalize">18 feb 2021</td>
+                        <td scope="row" class="">20%</td>
+                        <td scope="row">
+                          <span class="badge text-bg-success text-capitalize">done</span>
+                        </td>
+                        <td scope="row">
+                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+
+                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <td class="d-flex align-items-center column-gap-1" scope="row">
+                          <figure class="avatar mb-0">
+                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                          </figure>
+                          <span class="text-capitalize">
+                            classe 79
+                          </span>
+                        </td>
+                        <td scope="row" class=" text-capitalize">19 feb 2021</td>
+                        <td scope="row" class="">20%</td>
+                        <td scope="row">
+                          <span class="badge text-bg-danger text-capitalize">failed</span>
+                        </td>
+                        <td scope="row">
+                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+
+                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <td class="d-flex align-items-center column-gap-1" scope="row">
+                          <figure class="avatar mb-0">
+                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                          </figure>
+                          <span class="text-capitalize">
+                            classe 80
+                          </span>
+                        </td>
+                        <td scope="row" class=" text-capitalize">20 feb 2021</td>
+                        <td scope="row" class="">20%</td>
+                        <td scope="row">
+                          <span class="badge text-bg-success text-capitalize">done</span>
+                        </td>
+                        <td scope="row">
+                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+
+                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <td class="d-flex align-items-center column-gap-1" scope="row">
+                          <figure class="avatar mb-0">
+                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                          </figure>
+                          <span class="text-capitalize">
+                            classe 81
+                          </span>
+                        </td>
+                        <td scope="row" class=" text-capitalize">21 feb 2021</td>
+                        <td scope="row" class="">20%</td>
+                        <td scope="row">
+                          <span class="badge text-bg-danger text-capitalize">failed</span>
+                        </td>
+                        <td scope="row">
+                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+
+                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <td class="d-flex align-items-center column-gap-1" scope="row">
+                          <figure class="avatar mb-0">
+                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                          </figure>
+                          <span class="text-capitalize">
+                            classe 82
+                          </span>
+                        </td>
+                        <td scope="row" class=" text-capitalize">22 feb 2021</td>
+                        <td scope="row" class="">20%</td>
+                        <td scope="row">
+                          <span class="badge text-bg-success text-capitalize">done</span>
+                        </td>
+                        <td scope="row">
+                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+
+                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </th>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
+
+              <!-- DIV'S THE F.A.Q. -->
+              <div class="border rounded my-4">
+                <div class="border-bottom bg-secondary-subtle">
+                  <h4 class="text-capitalize px-1 pb-1">
+                    f.a.q. 
+                  </h4>
+                </div>
+
+                <div>
+
+                </div>
+              </div>
             </div>
             
+
             <div class="col-12 col-lg-4"></div>
           </div>
         </div>

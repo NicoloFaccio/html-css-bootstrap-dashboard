@@ -28,3 +28,9 @@ main > div:first-child {
 .breadcrumb-item {
     color: white;
 }
+
+/* FIRST TABLE'S CLASSES */
+
+.avatar {
+    max-width: 30px;
+}
