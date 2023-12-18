@@ -23,6 +23,13 @@ main > div:first-child {
     background-position: cover;
 }
 
+/* SIDE-BAR'S CLASSES */
+
+.link_white:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
 /* BREADCRUMPS'S CLASSES */
 
 .breadcrumb-item {
@@ -34,3 +41,6 @@ main > div:first-child {
 .avatar {
     max-width: 30px;
 }
+
+
+/* LAVORARE L'OFFCANVAS */

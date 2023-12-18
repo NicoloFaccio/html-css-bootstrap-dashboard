@@ -82,19 +82,22 @@
       <div data-bs-theme="dark" class="bg-primary-subtle d-flex flex-column justify-content-between flex-shrink-0 bg-body-tertiary h-100" style="width: fit-content;">
         <ul class="nav nav-pills nav-flush flex-column text-center">
           <li>
-            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2"  data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
+            link_white"  data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
               <i class="fa-solid fa-house"></i>
               <span class="d-none d-lg-block">home</span>
             </a>
           </li>
           <li>
-            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
+            link_white" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
               <i class="fa-solid fa-chart-simple"></i>
               <span class="d-none d-lg-block">stats</span>
             </a>
           </li>
           <li>
-            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2"  data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
+            link_white"  data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
               <i class="fa-solid fa-signal"></i>
               <span class="d-none d-lg-block">signals</span>
             </a>
@@ -102,7 +105,8 @@
         </ul>
         <div>
           <a href="#" class="text-white text-capitalize d-flex align-items-center justify-content-center gap-2 p-3
-          text-decoration-none">
+          text-decoration-none m-2
+          link_white">
             <i class="fa-solid fa-gear"></i>
             <span class="d-none d-lg-block">admin</span>
           </a>
@@ -131,7 +135,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
-                    ...
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                      <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -484,11 +491,27 @@
               <!-- DIV'S STATS -->
               <div class="border rounded my-4">
                 <ul class="list-group p-3">
-                  <li class="list-group-item">An item</li>
-                  <li class="list-group-item">A second item</li>
-                  <li class="list-group-item">A third item</li>
-                  <li class="list-group-item">A fourth item</li>
-                  <li class="list-group-item">And a fifth one</li>
+                  <li class="list-group-item">
+                    <figure>
+                      <img class="img-fluid" src="./assets/img/stats.jpeg" alt="Stats">
+                    </figure>
+                    <h6 class="fs-3">Utenti attivi</h6>
+                    <p>Lista degli studenti attivi in piattaforma nell'ultimo mese</p>
+                  </li>
+                  <li class="list-group-item text text-capitalize">
+                    gennaio: 1200
+                  </li>
+                  <li class="list-group-item text-capitalize">
+                    febbraio: 800
+                  </li>
+                  <li class="list-group-item text-capitalize">
+                    marzo: 1500
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">
+                      Visualizza report approfondito
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
