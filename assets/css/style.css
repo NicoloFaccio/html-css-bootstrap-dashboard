@@ -23,4 +23,8 @@ main > div:first-child {
     background-position: cover;
 }
 
-/* FINIRE LA BREACRUP DIVE C'è ILPIU */
+/* BREADCRUMPS'S CLASSES */
+
+.breadcrumb-item {
+    color: white;
+}

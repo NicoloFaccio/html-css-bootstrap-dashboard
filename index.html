@@ -78,94 +78,140 @@
     </header>
 
     <main class="d-flex">
-        <!-- DIV'S SIDE-BAR -->
-        <div data-bs-theme="dark" class="bg-primary-subtle d-flex flex-column justify-content-between flex-shrink-0 bg-body-tertiary h-100" style="width: fit-content;">
-            <ul class="nav nav-pills nav-flush flex-column text-center">
-              <li>
-                <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2"  data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
-                    <i class="fa-solid fa-house"></i>
-                    <span class="d-none d-lg-block">home</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
-                    <i class="fa-solid fa-chart-simple"></i>
-                    <span class="d-none d-lg-block">stats</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2"  data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
-                    <i class="fa-solid fa-signal"></i>
-                    <span class="d-none d-lg-block">signals</span>
-                </a>
-              </li>
-            </ul>
-            <div>
-              <a href="#" class="text-white text-capitalize d-flex align-items-center justify-content-center gap-2 p-3
-              text-decoration-none">
-                <i class="fa-solid fa-gear"></i>
-                <span class="d-none d-lg-block">admin</span>
-              </a>
-            </div>
+      <!-- DIV'S SIDE-BAR -->
+      <div data-bs-theme="dark" class="bg-primary-subtle d-flex flex-column justify-content-between flex-shrink-0 bg-body-tertiary h-100" style="width: fit-content;">
+        <ul class="nav nav-pills nav-flush flex-column text-center">
+          <li>
+            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2"  data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+              <i class="fa-solid fa-house"></i>
+              <span class="d-none d-lg-block">home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+              <i class="fa-solid fa-chart-simple"></i>
+              <span class="d-none d-lg-block">stats</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2"  data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+              <i class="fa-solid fa-signal"></i>
+              <span class="d-none d-lg-block">signals</span>
+            </a>
+          </li>
+        </ul>
+        <div>
+          <a href="#" class="text-white text-capitalize d-flex align-items-center justify-content-center gap-2 p-3
+          text-decoration-none">
+            <i class="fa-solid fa-gear"></i>
+            <span class="d-none d-lg-block">admin</span>
+          </a>
         </div>
+      </div>
 
-        <!-- DIV'S STUDENTS AND INFORMATIONS -->
-        <div class="w-100">
-            <div class="container-fluid bg-primary">
-                <div class="row">
-                    <div class="col-12 col-md-4 order-md-3 py-2">
-                        <div class="d-flex align-items-center column-gap-2">
-                            <span class="text-white text-capitalize">
-                                nuovo studente
-                            </span>
-                            <button class="btn btn-primary border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
+      <!-- DIV'S STUDENTS AND INFORMATIONS -->
+      <div class="w-100">
 
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                          <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                          </div>
-                          <div class="offcanvas-body">
-                            ...
-                          </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-12 col-md-4 order-md-1 py-2">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb text-white align-items-center column-gap-2">
-                              <li>
-                                <h3 class="text-capitalize">
-                                    boolean</h3>
-                              </li>
-                              <li class="bg-black bg-opacity-50 px-2 rounded-5 text-white breadcrumb-item active" aria-current="page">Piano blaze</li>
-                            </ol>
-                        </nav>
-
-                        <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                              <li class="breadcrumb-item bg-black bg-opacity-50 px-2 rounded-5 text-white "> 3 app</li>
-                              <li class=" active bg-black bg-opacity-50 px-2 rounded-5 text-white" aria-current="page">
-                                <i class="fa-solid fa-plus"></i>
-                              </li>
-                              <li class="active bg-black bg-opacity-50 px-2 rounded-5 text-white d-none d-lg-block" aria-current="page">Boolean mobile app</li>
-                              <li class="active bg-black bg-opacity-50 px-2 rounded-5 text-white d-none d-lg-block" aria-current="page">Boolean web app</li>
-                              <li class="active bg-black bg-opacity-50 px-2 rounded-5 text-white d-none d-lg-block" aria-current="page">Boolean blog app</li>
-                            </ol>
-                        </nav>
-                    </div>
-    
-                    <div class="col-12 col-md-4 order-md-2 py-2
-                    text-white">
-                        <p>Studenti online negli ultimi 30 minuti</p>
-                        <span class="fs-1">125</span>
-                    </div>
+        <!-- DIV'S COLORED BACKGROUND -->
+        <div>
+          <div class="container-fluid bg-primary">
+            <div class="row">
+              <div class="col-12 col-md-4 order-md-3 py-2">
+                <div class="d-flex align-items-center column-gap-2">
+                  <span class="text-white text-capitalize">
+                    nuovo studente
+                  </span>
+                  <button class="btn btn-primary border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
                 </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    ...
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 order-md-1 py-2">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb text-white align-items-center column-gap-2">
+                    <li>
+                      <h3 class="text-capitalize">
+                        boolean
+                      </h3>
+                    </li>
+                    <li class="bg-black bg-opacity-50 px-2 rounded-5 text-white breadcrumb-item active" aria-current="page">Piano blaze</li>
+                  </ol>
+                </nav>
+                <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item bg-black bg-opacity-50 px-2 rounded-5 text-white ">3 app</li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      <span class="d-lg-none bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                      <span class="d-none d-lg-inline-block bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                        Boolean mobile app
+                      </span>
+                      <span class="d-none d-lg-inline-block bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                        Boolean web app
+                      </span>
+                      <span class="d-none d-lg-inline-block bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                        Boolean blog app
+                      </span>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="col-12 col-md-4 order-md-2 py-2
+              text-white">
+                <p>Studenti online negli ultimi 30 minuti</p>
+                <span class="fs-1 fw-bold">125</span>
+              </div>
             </div>
+          </div>
         </div>
+  
+        <!-- DIV'S STUDENTS -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-8 p-2">
+              <div class="border rounded-1">
+                <div class="border-bottom bg-secondary-subtle">
+                  <h4 class="text-capitalize px-1 pb-1">prossime classi</h4>
+                </div>
+                <div>
+                  <table class="table table-hover table-responsive">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-capitalize">nome</th>
+                        <th scope="col" class="d-none d-lg-block">Data inizio</th>
+                        <th scope="col" class="d-none d-lg-block text-uppercase">roi</th>
+                        <th scope="col" class="text-capitalize">stato</th>
+                        <th scope="col" class="text-capitalize">azioni</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <th scope="row" class="d-none d-lg-block">1</th>
+                        <th scope="row" class="d-none d-lg-block">1</th>
+                        <th scope="row">1</th>
+                        <th scope="row">1</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4"></div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
