@@ -1,632 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <!-- Bootsrap's link-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- Fontawesome's link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- File css's link -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- Bootsrap's link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Fontawesome's link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- File css's link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid flex-nowrap">
-                <!-- Logo -->
-              <a class="navbar-brand" href="#">
-                <img class="img-fluid d-lg-none" src="./assets/img/mobile-logo.png" alt="logo-mobile">
-                <img class="img-fluid d-none d-lg-block"  src="./assets/img/logo.svg" alt="logo">
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid flex-nowrap">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img class="img-fluid d-lg-none" src="./assets/img/mobile-logo.png" alt="logo-mobile">
+          <img class="img-fluid d-none d-lg-block"  src="./assets/img/logo.svg" alt="logo">
+        </a>
+        <!-- Search bar -->
+        <form class="w-100" role="search">
+          <div class="d-flex justify-content-between">
+            <span class="input-group-text border-end-0" id="magnifying-glass">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" class="border-start-0 form-control bg-body-tertiary" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username">
+          </div>
+        </form>
+        <!-- Icons -->
+        <div id="navbarSupportedContent">
+          <ul class="nav flex-nowrap d-flex">
+            <li class="nav-item">
+              <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
+                <i class="fa-solid fa-list-ul"></i>
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
+                <i class="fa-solid fa-circle-question"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="text-warning nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#">profilpo</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#">fatturazione</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#">logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-              <!-- Search bar -->
-              <form class="w-100" role="search">
-                <div class="d-flex justify-content-between">
-                  <span class="input-group-text border-end-0" id="addon-wrapping">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </span>
-                  <input type="text" class="border-start-0 form-control bg-body-tertiary" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="addon-wrapping">
-                </div>
-              </form>
-
-              <!-- Icons -->
-              <div id="navbarSupportedContent">
-                <ul class="nav flex-nowrap d-flex">
-                  <li class="nav-item">
-                    <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
-                      <i class="fa-solid fa-list-ul"></i>
-                    </a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
-                      <i class="fa-solid fa-circle-question"></i>
-                    </a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="d-none d-lg-block nav-link text-body-secondary" aria-current="page" href="#">
-                      <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </a>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="text-warning nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa-solid fa-bell"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                      <li>
-                        <a class="dropdown-item text-capitalize" href="#">profilpo</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item text-capitalize" href="#">fatturazione</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item text-capitalize" href="#">logout</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="d-flex">
-      <!-- DIV'S SIDE-BAR -->
-      <div data-bs-theme="dark" class="bg-primary-subtle d-flex flex-column justify-content-between flex-shrink-0 bg-body-tertiary h-100" style="width: fit-content;">
-        <ul class="nav nav-pills nav-flush flex-column text-center">
-          <li>
-            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
-            link_white"  data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
-              <i class="fa-solid fa-house"></i>
-              <span class="d-none d-lg-block">home</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
-            link_white" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
-              <i class="fa-solid fa-chart-simple"></i>
-              <span class="d-none d-lg-block">stats</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
-            link_white"  data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
-              <i class="fa-solid fa-signal"></i>
-              <span class="d-none d-lg-block">signals</span>
-            </a>
-          </li>
-        </ul>
-        <div>
-          <a href="#" class="text-white text-capitalize d-flex align-items-center justify-content-center gap-2 p-3
-          text-decoration-none m-2
-          link_white">
-            <i class="fa-solid fa-gear"></i>
-            <span class="d-none d-lg-block">admin</span>
+  <main class="d-flex">
+    <!-- DIV'S SIDE-BAR -->
+    <div data-bs-theme="dark" class="bg-primary-subtle d-flex flex-column justify-content-between flex-shrink-0 bg-body-tertiary h-100" style="width: fit-content;">
+      <ul class="nav nav-pills nav-flush flex-column text-center">
+        <li>
+          <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
+          link_white"  data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+            <i class="fa-solid fa-house"></i>
+            <span class="d-none d-lg-block">home</span>
           </a>
-        </div>
+        </li>
+        <li>
+          <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
+          link_white" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span class="d-none d-lg-block">stats</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="d-flex align-items-center gap-2 text-white text-capitalize nav-link py-2 m-2
+          link_white"  data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+            <i class="fa-solid fa-signal"></i>
+            <span class="d-none d-lg-block">signals</span>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <a href="#" class="text-white text-capitalize d-flex align-items-center justify-content-center gap-2 p-3
+        text-decoration-none m-2
+        link_white">
+          <i class="fa-solid fa-gear"></i>
+          <span class="d-none d-lg-block">admin</span>
+        </a>
       </div>
-
-      <!-- DIV'S STUDENTS AND INFORMATIONS -->
-      <div class="w-100 overflow-auto">
-
-        <!-- DIV'S COLORED BACKGROUND -->
-        <div>
-          <div class="container-fluid bg-primary">
-            <div class="row">
-              <div class="col-12 col-md-4 col-lg-3 order-md-3 py-2">
-                <div class="d-flex align-items-center column-gap-2">
-                  <span class="text-white text-capitalize">
-                    nuovo studente
-                  </span>
-                  <button class="btn btn-primary border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <i class="fa-solid fa-plus"></i>
-                  </button>
-                </div>
-                <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">
-                      Inserisci un nuovo studente
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <div class="d-flex justify-content-between column-gap-3 my-3">
-                      <div class="w-50">
-                        <label class="text-capitalize" for="Name">nome</label>
-                        <input type="text" class="form-control" aria-label="Username" 
-                        aria-describedby="basic-addon1" id="Name"
-                        name="Name">
-                      </div>
-
-                      <div class="w-50">
-                        <label class="text-capitalize d-block" for="Last-Name">cognome</label>
-                        <input type="text" class="form-control" aria-label="Username" 
-                        aria-describedby="basic-addon1" id="Last-Name"
-                        name="Last-Name">
-                      </div>
-                    </div>
-
-                    <div class="d-flex justify-content-between column-gap-3">
-                      <div class="w-50">
-                        <label class="text-capitalize" for="e-mail">email</label>
-
-                        <div class="d-flex">
-                          <span class="input-group-text" id="addon-wrapping">@</span>
-                          <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"
-                          id="e-mail" name="e-mail">
-                        </div>
-                      </div>
-
-                      <div class="w-50">
-                        <label class="text-capitalize d-block" for="Password">password</label>
-                        <input type="text" class="form-control" aria-label="Username" 
-                        aria-describedby="basic-addon1" id="Password"
-                        name="Password">
-                      </div>
-                    </div>
-
-                    <div class="d-flex justify-content-between column-gap-3 my-3">
-                      <div class="w-50">
-                        <label class="text-capitalize" for="e-mail">indirizzo email</label>
-
-                        <div class="d-flex"> 
-                          <span class="input-group-text" id="addon-wrapping">@</span>
-                          <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"
-                          id="e-mail" name="e-mail">
-                        </div>
-                      </div>
-
-                      <div class="w-50">
-                        <label class="text-capitalize d-block" for="Password">password</label>
-                        <input type="text" class="form-control" aria-label="Username" 
-                        aria-describedby="basic-addon1" id="Password"
-                        name="Password">
-                      </div>
-                    </div>
-                    
-                    <div class="my-3">
-                      <label class="text-capitalize d-block" for="adress">indirrizzo</label>
-                      <input type="text" class="form-control" aria-label="Username" 
-                      aria-describedby="basic-addon1" id="adress"
-                      name="adress">
-                    </div>
-
-                    <div class="d-flex justify-content-between column-gap-3 my-3">
-                      <div>
-                        <label class="text-capitalize" for="city">città</label>
-                        <input type="text" class="form-control" aria-label="Username" 
-                        aria-describedby="basic-addon1" id="city"
-                        name="city">
-                      </div>
-
-                      <form action="/action_page.php" method="get">
-                        <label class="text-capitalize" for="nation">stato:</label>
-                        <input class="form-control" list="nations" name="nation" id="nation" placeholder="Scegli...">
-                        <datalist id="nations">
-                          <option value="Italia">
-                          <option value="Francia">
-                          <option value="Cina">
-                          <option value="Germania">
-                          <option value="Danimarca">
-                        </datalist>
-                      </form>
-                      
-                      <div>
-                        <label class="text-uppercase d-block" for="CAP">cap</label>
-                        <input type="text" class="form-control" aria-label="Username" 
-                        aria-describedby="basic-addon1" id="CAP"
-                        name="CAP">
-                      </div>
-                    </div>
-
-                    <form action="/action_page.php">
-                      <label class="text-capitalize" for="myfile">foto:</label>
-                      <input class="border rounded-1 w-100" type="file" id="myfile" name="myfile" multiple><br><br>
-                    </form>
-
-                    <form action="/action_page.php">
-                      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" required>
-                      <label for="vehicle1">Seleziona per proseguire</label>
-                    </form>
-
-                    <form class="pt-3" action="/action_page.php">
-                      <input class="bg-primary fw-bold text-white border-0 rounded p-2" type="submit"     value="Salva">
-    
-                      <input class="bg-warning fw-bold text-black border-0 rounded p-2" type="submit"     value="Svuota">
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 col-lg-7 order-md-1 py-2">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb text-white align-items-center column-gap-2">
-                    <li>
-                      <h3 class="text-capitalize">
-                        boolean
-                      </h3>
-                    </li>
-                    <li class="bg-black bg-opacity-50 px-2 rounded-5 text-white breadcrumb-item active" aria-current="page">Piano blaze</li>
-                  </ol>
-                </nav>
-                <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                      <a href="#" class="text-decoration-none bg-black bg-opacity-50 rounded-5 text-white px-2 d-inline-block">
-                        3 app
-                      </a>
-                    </li>
-                    <li class="breadcrumb-item active ps-0" aria-current="page">
-                      <span class="d-lg-none my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
-                        <i class="fa-solid fa-plus"></i>
-                      </span>
-                      <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
-                        Boolean mobile app
-                      </span>
-                      <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
-                        Boolean web app
-                      </span>
-                      <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
-                        Boolean blog app
-                      </span>
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-              <div class="col-12 col-md-4 col-lg-2 order-md-2 py-2
-              text-white">
-                <p>Studenti online negli ultimi 30 minuti</p>
-                <span class="fs-1 fw-bold">125</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- DIV'S STUDENTS -->
-        <div class="container-fluid">
+    </div>
+    <!-- DIV'S STUDENTS AND INFORMATIONS -->
+    <div class="w-100 overflow-auto">
+      <!-- DIV'S COLORED BACKGROUND -->
+      <div>
+        <div class="container-fluid bg-primary">
           <div class="row">
-            <div class="col-12 col-lg-8 py-3">
-              <!-- DIV'S TABLE OF THE CLASSES -->
-              <div class="border rounded-1">
-                <div class="border-bottom bg-secondary-subtle">
-                  <h4 class="text-capitalize px-1 pb-1">prossime classi</h4>
-                </div>
-                <div class="px-3">
-                  <table class="table align-middle table-hover table-responsive text-center mb-4">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="text-capitalize text-start w-50">nome</th>
-                        <th scope="col" class="d-none d-md-table-cell">Data inizio</th>
-                        <th scope="col" class="d-none d-md-table-cell text-uppercase">roi</th>
-                        <th scope="col" class="text-capitalize">stato</th>
-                        <th scope="col" class="text-capitalize">azioni</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td scope="row" class="text-start">
-                          <figure class="avatar mb-0 d-inline-block">
-                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
-                          </figure>
-                          <span class="text-capitalize">
-                            classe 75
-                          </span>
-                        </td>
-                        <td scope="row" class="d-none d-md-table-cell text-capitalize">15 feb 2021</td>
-                        <td scope="row" class="d-none d-md-table-cell">20%</td>
-                        <td scope="row">
-                          <span class="badge text-bg-success text-capitalize">done</span>
-                        </td>
-                        <td scope="row">
-                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-
-                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td scope="row" class="text-start">
-                          <figure class="avatar mb-0 d-inline-block">
-                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
-                          </figure>
-                          <span class="text-capitalize">
-                            classe 76
-                          </span>
-                        </td>
-                        <td scope="row" class="d-none d-md-table-cell text-capitalize">16 feb 2021</td>
-                        <td scope="row" class="d-none d-md-table-cell">20%</td>
-                        <td scope="row">
-                          <span class="badge text-bg-success text-capitalize">done</span>
-                        </td>
-                        <td scope="row">
-                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-
-                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td scope="row" class="text-start">
-                          <figure class="avatar mb-0 d-inline-block">
-                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
-                          </figure>
-                          <span class="text-capitalize">
-                            classe 77
-                          </span>
-                        </td>
-                        <td scope="row" class="d-none d-md-table-cell text-capitalize">17 feb 2021</td>
-                        <td scope="row" class="d-none d-md-table-cell">20%</td>
-                        <td scope="row">
-                          <span class="badge text-bg-warning text-capitalize text-white">process</span>
-                        </td>
-                        <td scope="row">
-                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-
-                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td scope="row" class="text-start">
-                          <figure class="avatar mb-0 d-inline-block">
-                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
-                          </figure>
-                          <span class="text-capitalize">
-                            classe 78
-                          </span>
-                        </td>
-                        <td scope="row" class="d-none d-md-table-cell text-capitalize">18 feb 2021</td>
-                        <td scope="row" class="d-none d-md-table-cell">20%</td>
-                        <td scope="row">
-                          <span class="badge text-bg-success text-capitalize">done</span>
-                        </td>
-                        <td scope="row">
-                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-
-                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td scope="row" class="text-start">
-                          <figure class="avatar mb-0 d-inline-block">
-                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
-                          </figure>
-                          <span class="text-capitalize">
-                            classe 79
-                          </span>
-                        </td>
-                        <td scope="row" class="d-none d-md-table-cell text-capitalize">19 feb 2021</td>
-                        <td scope="row" class="d-none d-md-table-cell">20%</td>
-                        <td scope="row">
-                          <span class="badge text-bg-danger text-capitalize">failed</span>
-                        </td>
-                        <td scope="row">
-                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-
-                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td scope="row" class="text-start">
-                          <figure class="avatar mb-0 d-inline-block">
-                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
-                          </figure>
-                          <span class="text-capitalize">
-                            classe 80
-                          </span>
-                        </td>
-                        <td scope="row" class="d-none d-md-table-cell text-capitalize">20 feb 2021</td>
-                        <td scope="row" class="d-none d-md-table-cell">20%</td>
-                        <td scope="row">
-                          <span class="badge text-bg-success text-capitalize">done</span>
-                        </td>
-                        <td scope="row">
-                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-
-                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td scope="row" class="text-start">
-                          <figure class="avatar mb-0 d-inline-block">
-                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
-                          </figure>
-                          <span class="text-capitalize">
-                            classe 81
-                          </span>
-                        </td>
-                        <td scope="row" class="d-none d-md-table-cell text-capitalize">21 feb 2021</td>
-                        <td scope="row" class="d-none d-md-table-cell">20%</td>
-                        <td scope="row">
-                          <span class="badge text-bg-danger text-capitalize">failed</span>
-                        </td>
-                        <td scope="row">
-                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-
-                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td scope="row" class="text-start">
-                          <figure class="avatar mb-0 d-inline-block">
-                            <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
-                          </figure>
-                          <span class="text-capitalize">
-                            classe 82
-                          </span>
-                        </td>
-                        <td scope="row" class="d-none d-md-table-cell text-capitalize">22 feb 2021</td>
-                        <td scope="row" class="d-none d-md-table-cell">20%</td>
-                        <td scope="row">
-                          <span class="badge text-bg-success text-capitalize">done</span>
-                        </td>
-                        <td scope="row">
-                          <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-
-                          <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+            <div class="col-12 col-md-4 col-lg-3 order-md-3 py-2">
+              <div class="d-flex align-items-center column-gap-2">
+                <span class="text-white text-capitalize">
+                  nuovo studente
+                </span>
+                <button class="btn btn-primary border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
               </div>
-
-              <!-- DIV'S THE F.A.Q. -->
-              <div class="border rounded my-4">
-                <div class="border-bottom bg-secondary-subtle">
-                  <h4 class="text-capitalize px-1 pb-1">
-                    f.a.q. 
-                  </h4>
+              <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                    Inserisci un nuovo studente
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Come aggiungere un nuovo studente?
-                      </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        Clicca sul + in alto nella sezione blu*
-                      </div>
+                <div class="offcanvas-body">
+                  <div class="d-flex justify-content-between column-gap-3 my-3">
+                    <div class="w-50">
+                      <label class="text-capitalize" for="Name">nome</label>
+                      <input type="text" class="form-control" aria-label="Username" 
+                      aria-describedby="Name" id="Name"
+                      name="Name">
+                    </div>
+                    <div class="w-50">
+                      <label class="text-capitalize d-block" for="Last-Name">cognome</label>
+                      <input type="text" class="form-control" aria-label="Username" 
+                      aria-describedby="Last-Name" id="Last-Name"
+                      name="Last-Name">
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Come posso accedere alle informazioni del mio account?
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        Clicca sull'icona della campanella.
+                  <div class="d-flex justify-content-between column-gap-3">
+                    <div class="w-50">
+                      <label class="text-capitalize" for="e-mail">email</label>
+                      <div class="d-flex">
+                        <span class="input-group-text" id="snail-mail">@</span>
+                        <input type="text" class="form-control" aria-label="Username" aria-describedby="e-mail"
+                        id="e-mail" name="e-mail">
                       </div>
                     </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Posso usare questa dashboard da mobile?
-                      </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        Certamente
-                      </div>
+                    <div class="w-50">
+                      <label class="text-capitalize d-block" for="Password">password</label>
+                      <input type="text" class="form-control" aria-label="Username" 
+                      aria-describedby="Password" id="Password"
+                      name="Password">
                     </div>
                   </div>
+                  <div class="d-flex justify-content-between column-gap-3 my-3">
+                    <div class="w-50">
+                      <label class="text-capitalize" for="e-mail">indirizzo email</label>
+                      <div class="d-flex"> 
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                        <input type="text" class="form-control" aria-label="Username" aria-describedby="adress-email"
+                        id="adress-email" name="adress-email">
+                      </div>
+                    </div>
+                    <div class="w-50">
+                      <label class="text-capitalize d-block" for="Password">password</label>
+                      <input type="text" class="form-control" aria-label="Username" 
+                      aria-describedby="password-confirmation" id="password-confirmation"
+                      name="password-confirmation">
+                    </div>
+                  </div>
+                  
+                  <div class="my-3">
+                    <label class="text-capitalize d-block" for="adress">indirrizzo</label>
+                    <input type="text" class="form-control" aria-label="Username" 
+                    aria-describedby="adress" id="adress"
+                    name="adress">
+                  </div>
+                  <div class="d-flex justify-content-between column-gap-3 my-3">
+                    <div>
+                      <label class="text-capitalize" for="city">città</label>
+                      <input type="text" class="form-control" aria-label="Username" 
+                      aria-describedby="city" id="city"
+                      name="city">
+                    </div>
+                    <form action="/action_page.php" method="get">
+                      <label class="text-capitalize" for="nation">stato:</label>
+                      <input class="form-control" list="nations" name="nation" id="nation" placeholder="Scegli...">
+                      <datalist id="nations">
+                        <option value="Italia">
+                        <option value="Francia">
+                        <option value="Cina">
+                        <option value="Germania">
+                        <option value="Danimarca">
+                      </datalist>
+                    </form>
+                    
+                    <div>
+                      <label class="text-uppercase d-block" for="CAP">cap</label>
+                      <input type="text" class="form-control" aria-label="Username" 
+                      aria-describedby="CAP" id="CAP"
+                      name="CAP">
+                    </div>
+                  </div>
+                  <form action="/action_page.php">
+                    <label class="text-capitalize" for="myfile">foto:</label>
+                    <input class="border rounded-1 w-100" type="file" id="myfile" name="myfile" multiple><br><br>
+                  </form>
+                  <form action="/action_page.php">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" required>
+                    <label for="vehicle1">Seleziona per proseguire</label>
+                  </form>
+                  <form class="pt-3" action="/action_page.php">
+                    <input class="bg-primary fw-bold text-white border-0 rounded p-2" type="submit"     value="Salva">
+  
+                    <input class="bg-warning fw-bold text-black border-0 rounded p-2" type="submit"     value="Svuota">
+                  </form>
                 </div>
               </div>
             </div>
-            
-
-            <div class="col-12 col-lg-4 py-3">
-              <!-- DIV'S TODO -->
-              <div class="border rounded-1">
-                <div class="border-bottom bg-secondary-subtle">
-                  <h4 class="text-capitalize px-1 pb-1">
-                    todo                  
-                  </h4>
-                </div>
-
-                <ul class="list-group p-3">
-                  <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                    <label class="form-check-label" for="firstCheckbox">
-                      Kickoff nuove classi
-                    </label>
+            <div class="col-12 col-md-4 col-lg-7 order-md-1 py-2">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb text-white align-items-center column-gap-2">
+                  <li>
+                    <h3 class="text-capitalize">
+                      boolean
+                    </h3>
                   </li>
-                  <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                    <label class="form-check-label" for="secondCheckbox">
-                      Lezione su Bootstrap 5 in classe #75
-                    </label>
-                  </li>
-                  <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                    <label class="form-check-label" for="thirdCheckbox">
-                      Controllare username github studenti
-                    </label>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- DIV'S STATS -->
-              <div class="border rounded my-4">
-                <ul class="list-group p-3">
-                  <li class="list-group-item">
-                    <figure>
-                      <img class="img-fluid" src="./assets/img/stats.jpeg" alt="Stats">
-                    </figure>
-                    <h6 class="fs-3">Utenti attivi</h6>
-                    <p>Lista degli studenti attivi in piattaforma nell'ultimo mese</p>
-                  </li>
-                  <li class="list-group-item text text-capitalize">
-                    gennaio: 1200
-                  </li>
-                  <li class="list-group-item text-capitalize">
-                    febbraio: 800
-                  </li>
-                  <li class="list-group-item text-capitalize">
-                    marzo: 1500
-                  </li>
-                  <li class="list-group-item">
-                    <a href="#">
-                      Visualizza report approfondito
+                  <li class="bg-black bg-opacity-50 px-2 rounded-5 text-white breadcrumb-item active" aria-current="page">Piano blaze</li>
+                </ol>
+              </nav>
+              <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="#" class="text-decoration-none bg-black bg-opacity-50 rounded-5 text-white px-2 d-inline-block">
+                      3 app
                     </a>
                   </li>
-                </ul>
-              </div>
+                  <li class="breadcrumb-item active ps-0" aria-current="page">
+                    <span class="d-lg-none my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                      <i class="fa-solid fa-plus"></i>
+                    </span>
+                    <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                      Boolean mobile app
+                    </span>
+                    <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                      Boolean web app
+                    </span>
+                    <span class="d-none d-lg-inline-block my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
+                      Boolean blog app
+                    </span>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 order-md-2 py-2
+            text-white">
+              <p>Studenti online negli ultimi 30 minuti</p>
+              <span class="fs-1 fw-bold">125</span>
             </div>
           </div>
         </div>
       </div>
-    </main>
 
-    <!-- Bootstrap javascript's link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <!-- DIV'S STUDENTS -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-8 py-3">
+            <!-- DIV'S TABLE OF THE CLASSES -->
+            <div class="border rounded-1">
+              <div class="border-bottom bg-secondary-subtle">
+                <h4 class="text-capitalize px-1 pb-1">prossime classi</h4>
+              </div>
+              <div class="px-3">
+                <table class="table align-middle table-hover table-responsive text-center mb-4">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-capitalize text-start w-50">nome</th>
+                      <th scope="col" class="d-none d-md-table-cell">Data inizio</th>
+                      <th scope="col" class="d-none d-md-table-cell text-uppercase">roi</th>
+                      <th scope="col" class="text-capitalize">stato</th>
+                      <th scope="col" class="text-capitalize">azioni</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-start">
+                        <figure class="avatar mb-0 d-inline-block">
+                          <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                        </figure>
+                        <span class="text-capitalize">
+                          classe 75
+                        </span>
+                      </td>
+                      <td class="d-none d-md-table-cell text-capitalize">15 feb 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success text-capitalize">done</span>
+                      </td>
+                      <td>
+                        <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <figure class="avatar mb-0 d-inline-block">
+                          <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                        </figure>
+                        <span class="text-capitalize">
+                          classe 76
+                        </span>
+                      </td>
+                      <td class="d-none d-md-table-cell text-capitalize">16 feb 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success text-capitalize">done</span>
+                      </td>
+                      <td>
+                        <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <figure class="avatar mb-0 d-inline-block">
+                          <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                        </figure>
+                        <span class="text-capitalize">
+                          classe 77
+                        </span>
+                      </td>
+                      <td class="d-none d-md-table-cell text-capitalize">17 feb 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-warning text-capitalize text-white">process</span>
+                      </td>
+                      <td>
+                        <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <figure class="avatar mb-0 d-inline-block">
+                          <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                        </figure>
+                        <span class="text-capitalize">
+                          classe 78
+                        </span>
+                      </td>
+                      <td class="d-none d-md-table-cell text-capitalize">18 feb 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success text-capitalize">done</span>
+                      </td>
+                      <td>
+                        <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <figure class="avatar mb-0 d-inline-block">
+                          <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                        </figure>
+                        <span class="text-capitalize">
+                          classe 79
+                        </span>
+                      </td>
+                      <td class="d-none d-md-table-cell text-capitalize">19 feb 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-danger text-capitalize">failed</span>
+                      </td>
+                      <td>
+                        <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <figure class="avatar mb-0 d-inline-block">
+                          <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                        </figure>
+                        <span class="text-capitalize">
+                          classe 80
+                        </span>
+                      </td>
+                      <td class="d-none d-md-table-cell text-capitalize">20 feb 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success text-capitalize">done</span>
+                      </td>
+                      <td>
+                        <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <figure class="avatar mb-0 d-inline-block">
+                          <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                        </figure>
+                        <span class="text-capitalize">
+                          classe 81
+                        </span>
+                      </td>
+                      <td class="d-none d-md-table-cell text-capitalize">21 feb 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-danger text-capitalize">failed</span>
+                      </td>
+                      <td>
+                        <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <figure class="avatar mb-0 d-inline-block">
+                          <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
+                        </figure>
+                        <span class="text-capitalize">
+                          classe 82
+                        </span>
+                      </td>
+                      <td class="d-none d-md-table-cell text-capitalize">22 feb 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success text-capitalize">done</span>
+                      </td>
+                      <td>
+                        <button class="rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- DIV'S THE F.A.Q. -->
+            <div class="border rounded my-4">
+              <div class="border-bottom bg-secondary-subtle">
+                <h4 class="text-capitalize px-1 pb-1">
+                  f.a.q. 
+                </h4>
+              </div>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Come aggiungere un nuovo studente?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Clicca sul + in alto nella sezione blu*
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Come posso accedere alle informazioni del mio account?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Clicca sull'icona della campanella.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Posso usare questa dashboard da mobile?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Certamente
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-lg-4 py-3">
+            <!-- DIV'S TODO -->
+            <div class="border rounded-1">
+              <div class="border-bottom bg-secondary-subtle">
+                <h4 class="text-capitalize px-1 pb-1">
+                  todo                  
+                </h4>
+              </div>
+              <ul class="list-group p-3">
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                  <label class="form-check-label" for="firstCheckbox">
+                    Kickoff nuove classi
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                  <label class="form-check-label" for="secondCheckbox">
+                    Lezione su Bootstrap 5 in classe #75
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                  <label class="form-check-label" for="thirdCheckbox">
+                    Controllare username github studenti
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <!-- DIV'S STATS -->
+            <div class="border rounded my-4">
+              <ul class="list-group p-3">
+                <li class="list-group-item">
+                  <figure>
+                    <img class="img-fluid" src="./assets/img/stats.jpeg" alt="Stats">
+                  </figure>
+                  <h6 class="fs-3">Utenti attivi</h6>
+                  <p>Lista degli studenti attivi in piattaforma nell'ultimo mese</p>
+                </li>
+                <li class="list-group-item text text-capitalize">
+                  gennaio: 1200
+                </li>
+                <li class="list-group-item text-capitalize">
+                  febbraio: 800
+                </li>
+                <li class="list-group-item text-capitalize">
+                  marzo: 1500
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    Visualizza report approfondito
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    
+  <!-- Bootstrap javascript's link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

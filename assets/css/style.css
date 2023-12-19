@@ -20,7 +20,6 @@ main {
 main > div:first-child {
     background-image: url("../img/sidebar-bg.png");
     background-repeat: no-repeat;
-    background-position: cover;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
