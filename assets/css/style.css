@@ -45,3 +45,12 @@ main > div:first-child {
 .avatar {
     max-width: 30px;
 }
+
+
+/* MEDIA QUEERIES */
+
+@media screen and (min-width: 992px) {
+    .offcanvas {
+        width: 400px;
+    }
+}

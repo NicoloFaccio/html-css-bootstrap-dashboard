@@ -120,7 +120,7 @@
         <div>
           <div class="container-fluid bg-primary">
             <div class="row">
-              <div class="col-12 col-md-4 order-md-3 py-2">
+              <div class="col-12 col-md-4 col-lg-3 order-md-3 py-2">
                 <div class="d-flex align-items-center column-gap-2">
                   <span class="text-white text-capitalize">
                     nuovo studente
@@ -156,10 +156,12 @@
                     <div class="d-flex justify-content-between column-gap-3">
                       <div class="w-50">
                         <label class="text-capitalize" for="e-mail">email</label>
-  
-                        <span class="input-group-text" id="addon-wrapping">@</span>
-                        <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"
-                        id="e-mail" name="e-mail">
+
+                        <div class="d-flex">
+                          <span class="input-group-text" id="addon-wrapping">@</span>
+                          <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"
+                          id="e-mail" name="e-mail">
+                        </div>
                       </div>
 
                       <div class="w-50">
@@ -173,10 +175,12 @@
                     <div class="d-flex justify-content-between column-gap-3 my-3">
                       <div class="w-50">
                         <label class="text-capitalize" for="e-mail">indirizzo email</label>
-  
-                        <span class="input-group-text" id="addon-wrapping">@</span>
-                        <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"
-                        id="e-mail" name="e-mail">
+
+                        <div class="d-flex"> 
+                          <span class="input-group-text" id="addon-wrapping">@</span>
+                          <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"
+                          id="e-mail" name="e-mail">
+                        </div>
                       </div>
 
                       <div class="w-50">
@@ -240,7 +244,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 order-md-1 py-2">
+              <div class="col-12 col-md-4 col-lg-7 order-md-1 py-2">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb text-white align-items-center column-gap-2">
                     <li>
@@ -252,9 +256,13 @@
                   </ol>
                 </nav>
                 <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
-                  <ol class="breadcrumb flex-nowrap">
-                    <li class="breadcrumb-item bg-black bg-opacity-50 px-2 rounded-5 text-white ">3 app</li>
-                    <li class="breadcrumb-item active" aria-current="page">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="#" class="text-decoration-none bg-black bg-opacity-50 rounded-5 text-white px-2 d-inline-block">
+                        3 app
+                      </a>
+                    </li>
+                    <li class="breadcrumb-item active ps-0" aria-current="page">
                       <span class="d-lg-none my-1 bg-black bg-opacity-50 px-2 rounded-5 text-white">
                         <i class="fa-solid fa-plus"></i>
                       </span>
@@ -271,7 +279,7 @@
                   </ol>
                 </nav>
               </div>
-              <div class="col-12 col-md-4 order-md-2 py-2
+              <div class="col-12 col-md-4 col-lg-2 order-md-2 py-2
               text-white">
                 <p>Studenti online negli ultimi 30 minuti</p>
                 <span class="fs-1 fw-bold">125</span>
@@ -293,25 +301,25 @@
                   <table class="table align-middle table-hover table-responsive text-center mb-4">
                     <thead>
                       <tr>
-                        <th scope="col" class="text-capitalize text-start">nome</th>
-                        <th scope="col" class="">Data inizio</th>
-                        <th scope="col" class=" text-uppercase">roi</th>
+                        <th scope="col" class="text-capitalize text-start w-50">nome</th>
+                        <th scope="col" class="d-none d-md-table-cell">Data inizio</th>
+                        <th scope="col" class="d-none d-md-table-cell text-uppercase">roi</th>
                         <th scope="col" class="text-capitalize">stato</th>
                         <th scope="col" class="text-capitalize">azioni</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="d-flex align-items-center column-gap-1" scope="row">
-                          <figure class="avatar mb-0">
+                        <td scope="row" class="text-start">
+                          <figure class="avatar mb-0 d-inline-block">
                             <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
                           </figure>
                           <span class="text-capitalize">
                             classe 75
                           </span>
                         </td>
-                        <td scope="row" class=" text-capitalize">15 feb 2021</td>
-                        <td scope="row" class="">20%</td>
+                        <td scope="row" class="d-none d-md-table-cell text-capitalize">15 feb 2021</td>
+                        <td scope="row" class="d-none d-md-table-cell">20%</td>
                         <td scope="row">
                           <span class="badge text-bg-success text-capitalize">done</span>
                         </td>
@@ -323,20 +331,20 @@
                           <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
                             <i class="fa-solid fa-trash"></i>
                           </button>
-                        </th>
+                        </td>
                       </tr>
 
                       <tr>
-                        <td class="d-flex align-items-center column-gap-1" scope="row">
-                          <figure class="avatar mb-0">
+                        <td scope="row" class="text-start">
+                          <figure class="avatar mb-0 d-inline-block">
                             <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
                           </figure>
                           <span class="text-capitalize">
                             classe 76
                           </span>
                         </td>
-                        <td scope="row" class=" text-capitalize">16 feb 2021</td>
-                        <td scope="row" class="">20%</td>
+                        <td scope="row" class="d-none d-md-table-cell text-capitalize">16 feb 2021</td>
+                        <td scope="row" class="d-none d-md-table-cell">20%</td>
                         <td scope="row">
                           <span class="badge text-bg-success text-capitalize">done</span>
                         </td>
@@ -348,20 +356,20 @@
                           <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
                             <i class="fa-solid fa-trash"></i>
                           </button>
-                        </th>
+                        </td>
                       </tr>
 
                       <tr>
-                        <td class="d-flex align-items-center column-gap-1" scope="row">
-                          <figure class="avatar mb-0">
+                        <td scope="row" class="text-start">
+                          <figure class="avatar mb-0 d-inline-block">
                             <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
                           </figure>
                           <span class="text-capitalize">
                             classe 77
                           </span>
                         </td>
-                        <td scope="row" class=" text-capitalize">17 feb 2021</td>
-                        <td scope="row" class="">20%</td>
+                        <td scope="row" class="d-none d-md-table-cell text-capitalize">17 feb 2021</td>
+                        <td scope="row" class="d-none d-md-table-cell">20%</td>
                         <td scope="row">
                           <span class="badge text-bg-warning text-capitalize text-white">process</span>
                         </td>
@@ -373,20 +381,20 @@
                           <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
                             <i class="fa-solid fa-trash"></i>
                           </button>
-                        </th>
+                        </td>
                       </tr>
 
                       <tr>
-                        <td class="d-flex align-items-center column-gap-1" scope="row">
-                          <figure class="avatar mb-0">
+                        <td scope="row" class="text-start">
+                          <figure class="avatar mb-0 d-inline-block">
                             <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
                           </figure>
                           <span class="text-capitalize">
                             classe 78
                           </span>
                         </td>
-                        <td scope="row" class=" text-capitalize">18 feb 2021</td>
-                        <td scope="row" class="">20%</td>
+                        <td scope="row" class="d-none d-md-table-cell text-capitalize">18 feb 2021</td>
+                        <td scope="row" class="d-none d-md-table-cell">20%</td>
                         <td scope="row">
                           <span class="badge text-bg-success text-capitalize">done</span>
                         </td>
@@ -398,20 +406,20 @@
                           <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
                             <i class="fa-solid fa-trash"></i>
                           </button>
-                        </th>
+                        </td>
                       </tr>
 
                       <tr>
-                        <td class="d-flex align-items-center column-gap-1" scope="row">
-                          <figure class="avatar mb-0">
+                        <td scope="row" class="text-start">
+                          <figure class="avatar mb-0 d-inline-block">
                             <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
                           </figure>
                           <span class="text-capitalize">
                             classe 79
                           </span>
                         </td>
-                        <td scope="row" class=" text-capitalize">19 feb 2021</td>
-                        <td scope="row" class="">20%</td>
+                        <td scope="row" class="d-none d-md-table-cell text-capitalize">19 feb 2021</td>
+                        <td scope="row" class="d-none d-md-table-cell">20%</td>
                         <td scope="row">
                           <span class="badge text-bg-danger text-capitalize">failed</span>
                         </td>
@@ -423,20 +431,20 @@
                           <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
                             <i class="fa-solid fa-trash"></i>
                           </button>
-                        </th>
+                        </td>
                       </tr>
 
                       <tr>
-                        <td class="d-flex align-items-center column-gap-1" scope="row">
-                          <figure class="avatar mb-0">
+                        <td scope="row" class="text-start">
+                          <figure class="avatar mb-0 d-inline-block">
                             <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
                           </figure>
                           <span class="text-capitalize">
                             classe 80
                           </span>
                         </td>
-                        <td scope="row" class=" text-capitalize">20 feb 2021</td>
-                        <td scope="row" class="">20%</td>
+                        <td scope="row" class="d-none d-md-table-cell text-capitalize">20 feb 2021</td>
+                        <td scope="row" class="d-none d-md-table-cell">20%</td>
                         <td scope="row">
                           <span class="badge text-bg-success text-capitalize">done</span>
                         </td>
@@ -448,20 +456,20 @@
                           <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
                             <i class="fa-solid fa-trash"></i>
                           </button>
-                        </th>
+                        </td>
                       </tr>
 
                       <tr>
-                        <td class="d-flex align-items-center column-gap-1" scope="row">
-                          <figure class="avatar mb-0">
+                        <td scope="row" class="text-start">
+                          <figure class="avatar mb-0 d-inline-block">
                             <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
                           </figure>
                           <span class="text-capitalize">
                             classe 81
                           </span>
                         </td>
-                        <td scope="row" class=" text-capitalize">21 feb 2021</td>
-                        <td scope="row" class="">20%</td>
+                        <td scope="row" class="d-none d-md-table-cell text-capitalize">21 feb 2021</td>
+                        <td scope="row" class="d-none d-md-table-cell">20%</td>
                         <td scope="row">
                           <span class="badge text-bg-danger text-capitalize">failed</span>
                         </td>
@@ -473,20 +481,20 @@
                           <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
                             <i class="fa-solid fa-trash"></i>
                           </button>
-                        </th>
+                        </td>
                       </tr>
 
                       <tr>
-                        <td class="d-flex align-items-center column-gap-1" scope="row">
-                          <figure class="avatar mb-0">
+                        <td scope="row" class="text-start">
+                          <figure class="avatar mb-0 d-inline-block">
                             <img class="img-fluid rounded-circle" src="./assets/img/class-avatar.jpg" alt="class-avatar">
                           </figure>
                           <span class="text-capitalize">
                             classe 82
                           </span>
                         </td>
-                        <td scope="row" class=" text-capitalize">22 feb 2021</td>
-                        <td scope="row" class="">20%</td>
+                        <td scope="row" class="d-none d-md-table-cell text-capitalize">22 feb 2021</td>
+                        <td scope="row" class="d-none d-md-table-cell">20%</td>
                         <td scope="row">
                           <span class="badge text-bg-success text-capitalize">done</span>
                         </td>
@@ -498,7 +506,7 @@
                           <button class="rounded-1 rounded-1 bg-white text-secondary border-1 border-secondary">
                             <i class="fa-solid fa-trash"></i>
                           </button>
-                        </th>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
