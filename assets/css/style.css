@@ -50,6 +50,6 @@ main > div:first-child {
 
 @media screen and (min-width: 992px) {
     .offcanvas.offcanvas-end {
-        width: 50%;
+        width: 50% !important;
     }
 }
